@@ -1,0 +1,186 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/*
+.App-header {
+  background-color: #8c4242;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: red;
+}
+*/
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.box {
+  /* Vector 10 */
+
+
+  position: absolute;
+  width: 299px;
+  height: 142px;
+
+  background: rgba(39, 61, 85, 0.98);
+  box-shadow: 5px 4px 10px #000000;
+}
+
+.taskView {
+  margin-top: 12%;
+}
+
+.parent {
+  position: relative;
+  height: 1920; /* bigger than your svg */
+  width: 1080; /* bigger than your svg */
+}
+
+.blueBox {
+  position: absolute;
+  top: 48px;  /* relative to parent container */
+  right: 1016px; /* relative to parent container */
+}
+
+.logo {
+  position: absolute;
+  top: 88px;  /* relative to parent container */
+  right: 1038px; /* relative to parent container */
+}
+
+.menu {
+  position: absolute;
+  top: 0px;  /* relative to parent container */
+  right: 0px; /* relative to parent container */
+}
+.smallBlueBox {
+  position: absolute;
+  top: 28px;  /* relative to parent container */
+  right: 925px; /* relative to parent container */
+}
+
+.logo-text{
+  position: absolute;
+  top: 50px;  /* relative to parent container */
+  right: 1040px; /* relative to parent container */
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.card{
+  position: relative;
+  top: 160px;  /* relative to parent container */
+  right: 1213px; /* relative to parent container */
+}
+
+.items1{
+  padding-left: 35px;
+}
+
+.items2{
+  padding-top: 25px;
+  padding-left: 120px;
+}
+
+.items3{
+  padding-left: 60px;
+}
+
+.taskColumn {
+  padding-top: 25px;
+  min-height: 500px;
+  max-height: 700px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #AAAAAA;
+}
+
+.taskContainer {
+  padding-top: 10px;
+  border: 4px solid rgba(125, 125, 125, 1);
+  border-radius: 15px;
+  height: 630px;
+  overflow: scroll;
+}
+.fixedTasks{
+  background-color: #607d8b;
+}
+
+.sprintTasks{
+  background-color: #90a4ae;
+}
+
+.createTask {
+  position: absolute;
+  right: 50px;
+  top: 90px;
+  width: 85vh;
+}
+.userBox {
+  top: 0px;
+  padding: 5px;
+  background-color: rgba(39, 61, 85, 0.98);
+  position: absolute;
+  right: 10px;
+  color: white;
+  margin: 10px;
+}
+.gridText {
+  font-size: 12px !important;
+}
+
+.logCard {
+  background-color: rgb(170, 187, 187);
+}
+
+.logCardGrid {
+  background-color: rgb(195, 238, 236);
+}
+
+.logCardHolder {
+  height: 340px;
+  max-height: 340px;
+  overflow: scroll;
+}
