@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/2WOT-web/static/css/main.1556f349.css",
-    "main.js": "/2WOT-web/static/js/main.aa06a064.js",
+    "main.js": "/2WOT-web/static/js/main.d7dcdd4a.js",
     "static/js/787.d1d4a2c2.chunk.js": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js",
     "index.html": "/2WOT-web/index.html",
     "main.1556f349.css.map": "/2WOT-web/static/css/main.1556f349.css.map",
-    "main.aa06a064.js.map": "/2WOT-web/static/js/main.aa06a064.js.map",
+    "main.d7dcdd4a.js.map": "/2WOT-web/static/js/main.d7dcdd4a.js.map",
     "787.d1d4a2c2.chunk.js.map": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1556f349.css",
-    "static/js/main.aa06a064.js"
+    "static/js/main.d7dcdd4a.js"
   ]
 }
