@@ -3,9 +3,12 @@ import apiUtils from './api';
 
 import { FETCH_USER, GET_USER, GET_TASKS, START_TASK, SAVE_TASK, STOP_TASK, UPDATE_TASK, CLOSE_OPEN_TASK, GET_TIME_LOG_BY_TASK, GET_TASK_TIME } from './type';
 
+const domain = "https://to-work-on-time.rj.r.appspot.com/api/v1"
+//const domain = "http://localhost:8080/api/v1"
 
 function* fetchUser() {
-  const url = "http://localhost:8080/api/v1/timeuser/getUser/"
+
+  const url = `${domain}/timeuser/getUser/`
   try {
     const response = yield call(apiUtils.get,url+1);
     if(response.data){
@@ -20,7 +23,7 @@ function* fetchUser() {
 }
 
 function* startTask(action) {
-  const url = "http://localhost:8080/api/v1/task/startTaskTime";
+  const url = `${domain}/task/startTaskTime`;
   try {
     const response = yield call(apiUtils.post,url,action.task)
     if(true){
@@ -32,7 +35,7 @@ function* startTask(action) {
 }
 
 function* stopTask(action) {
-  const url = "http://localhost:8080/api/v1/task/stopTaskTime";
+  const url = `${domain}/task/stopTaskTime`;
   try {
     const response = yield call(apiUtils.post,url,action.task)
     if(true){
@@ -44,7 +47,7 @@ function* stopTask(action) {
 }
 
 function* saveTask(action) {
-  const url = "http://localhost:8080/api/v1/task/addTask";
+  const url = `${domain}/task/addTask`;
   try {
     const response = yield call(apiUtils.post,url,action.task)
     if(true){
@@ -56,7 +59,7 @@ function* saveTask(action) {
 }
 
 function* updateTask(action) {
-  const url = "http://localhost:8080/api/v1/task/updateTask";
+  const url = `${domain}/task/updateTask`;
   try {
     const response = yield call(apiUtils.post,url,action.task)
     if(response && response.data.statusOk){
@@ -71,7 +74,7 @@ function* updateTask(action) {
 }
 
 function* closeTask(action){
-  const url = "http://localhost:8080/api/v1/task/closeTask";
+  const url = `${domain}/task/closeTask`;
   try {
     const response = yield call(apiUtils.post,url,action.task)
     if(response && response.data.statusOk){
@@ -86,7 +89,7 @@ function* closeTask(action){
 }
 
 function* getTaskTime(action){
-  const url = "http://localhost:8080/api/v1/task/getTaskTime";
+  const url = `${domain}/task/getTaskTime`;
   try {
     const response = yield call(apiUtils.post,url,action.task)
     if(response && response.data.statusOk){
