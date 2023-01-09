@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/2WOT-web/static/css/main.1556f349.css",
-    "main.js": "/2WOT-web/static/js/main.d7dcdd4a.js",
+    "main.css": "/2WOT-web/static/css/main.47af3a1b.css",
+    "main.js": "/2WOT-web/static/js/main.cf5cec6c.js",
     "static/js/787.d1d4a2c2.chunk.js": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js",
+    "static/media/appheader.svg": "/2WOT-web/static/media/appheader.56f9bcb8476ef31734f2.svg",
     "index.html": "/2WOT-web/index.html",
-    "main.1556f349.css.map": "/2WOT-web/static/css/main.1556f349.css.map",
-    "main.d7dcdd4a.js.map": "/2WOT-web/static/js/main.d7dcdd4a.js.map",
+    "main.47af3a1b.css.map": "/2WOT-web/static/css/main.47af3a1b.css.map",
+    "main.cf5cec6c.js.map": "/2WOT-web/static/js/main.cf5cec6c.js.map",
     "787.d1d4a2c2.chunk.js.map": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1556f349.css",
-    "static/js/main.d7dcdd4a.js"
+    "static/css/main.47af3a1b.css",
+    "static/js/main.cf5cec6c.js"
   ]
 }
