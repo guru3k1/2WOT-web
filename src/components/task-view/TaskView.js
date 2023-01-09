@@ -1,10 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
-import { Typography } from "@mui/material";
-import TaskCard from '../task-card/TaskCard';
 import TaskForm from '../task-form/TaskForm';
 import LogView from '../log-view/LogView';
+import TaskGroup from "../task-group/TaskGroup";
 import { saveTask, setModalState, updateTask, closeOpenTask, getTimeLogByTask, setLogViewState} from "../ducks/action";
 
 const TaskView = () => {
@@ -64,7 +63,7 @@ const TaskView = () => {
     }
 
     return(
-        <div className={'taskView'}>
+        <div className='taskView'>
             <TaskForm 
                 task={{taskName,sprint, description,type,ecp}}
                 setTaskName={setTaskName} 
@@ -76,58 +75,18 @@ const TaskView = () => {
             />
             <LogView/>
             <Grid2 container justifyContent={'space-around'}>
-                <Grid2 xs={5}>
-                    <div className="taskContainer fixedTasks">
-                        <Typography sx={{padding: 2}}variant="h4" component="h2">
-                            Fixed tasks
-                        </Typography>
-                        <Grid2 container spacing={2} className={'taskList'} justifyContent="center">
-                            {tasks.map((task) => {
-                                if(task.type.toLowerCase() === 'fixed'){
-                                return(<Grid2 xs={"auto"}>
-                                    <TaskCard 
-                                        key={task.taskId}
-                                        task={task}
-                                        className='card'
-                                        editTask={editTask} 
-                                        getTimeLog={getTimeLog} 
-                                        closeTask={closeTask}
-                                    />
-                                </Grid2>)
-                                }else{
-                                    return <></>
-                                }
-                            })}
-                        </Grid2>
-                    </div>
-                </Grid2>
-                <Grid2 xs={5}>
-                    <div className="taskContainer sprintTasks">
-                        <Typography sx={{padding: 2}}variant="h4" component="h2">
-                            Sprint tasks
-                        </Typography>
-                        <Grid2 container spacing={2} className={'taskList'} justifyContent="center">
-                            {tasks.map((task) => {
-                                if(task.type.toLowerCase() === 'normal'){
-                                return(
-                                <Grid2 xs={"auto"}>
-                                    <TaskCard
-                                        key={task.taskId}
-                                        task={task}
-                                        className='card'
-                                        editTask={editTask} 
-                                        getTimeLog={getTimeLog} 
-                                        closeTask={closeTask}
-                                    />
-                                </Grid2>)
-                                }else{
-                                    return <></>
-                                }
-                                })}
-                            
-                        </Grid2>
-                    </div>
-                </Grid2>
+                <TaskGroup type={'fixed'}
+                    editTask={editTask} 
+                    getTimeLog={getTimeLog} 
+                    closeTask={closeTask}
+                    tasks={tasks}
+                />
+                <TaskGroup type={'normal'}
+                    editTask={editTask} 
+                    getTimeLog={getTimeLog} 
+                    closeTask={closeTask}
+                    tasks={tasks}
+                />
             </Grid2>
         </div>
     ) 

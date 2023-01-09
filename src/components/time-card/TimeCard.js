@@ -21,8 +21,8 @@ export default function TimeCard({date, duration, logTime}) {
     }
 
     return (
-    <Card sx={{ maxWidth: 600 }}>
-      <CardHeader className={"logCard"}
+    <Card>
+      <CardHeader className='logCard'
         action={
           <IconButton aria-label="settings" onClick={()=>setExpand(!expand)}>
             <MoreVertIcon />
@@ -32,7 +32,7 @@ export default function TimeCard({date, duration, logTime}) {
         subheader={`Time used: ${getDurationTime(duration)}`}
       />
       <Collapse in={expand}>
-        <CardContent className={"logCardGrid"}>
+        <CardContent className='logCardGrid'>
           <Grid container justifyContent={"space-around"}>
             <Grid item xs={3}>
                 Start time
@@ -55,19 +55,19 @@ export default function TimeCard({date, duration, logTime}) {
             {logTime[date].sort((a, b) => a.timeId - b.timeId).map((log,index) => {
               return(
                     <React.Fragment key={index}>
-                      <Grid item xs={3} className={"gridText"}>
+                      <Grid item xs={3} className='gridText'>
                         {getDate(log.startTime)}
                       </Grid>
                       <Grid item xs={0.1} sx={{height: 15}}>
                           <Divider orientation="vertical" />
                       </Grid>
-                      <Grid item xs={3} className={"gridText"}>
+                      <Grid item xs={3} className='gridText'>
                         {getDate(log.endTime)}
                       </Grid>
                       <Grid item xs={0.1} sx={{height: 15}}>
                           <Divider orientation="vertical" />
                       </Grid>
-                      <Grid item xs={3} className={"gridText"}>
+                      <Grid item xs={3} className='gridText'>
                         {getDurationTime(log.duration)}
                       </Grid>
                     </React.Fragment>)}

@@ -16,6 +16,9 @@ export default function MultiActionAreaCard({task, editTask, getTimeLog, closeTa
     const dispatch = useDispatch();
     const getDurationTime = (loggedDuration) => {
       var time = loggedDuration.split("PT")[1].split(".")[0];
+      if(time === "0S"){
+        return time
+      }
       return time+"S";
     }
     let startStopButton;
@@ -29,12 +32,12 @@ export default function MultiActionAreaCard({task, editTask, getTimeLog, closeTa
     </IconButton>
     }
   return (
-    <Card sx={{ maxWidth: 360, bgcolor: task.state==='active' ? cyan.A700 : undefined }}>
+    <Card sx={{ maxWidth: 320, bgcolor: task.state==='active' ? cyan.A700 : undefined }}>
       <CardActionArea>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: purple[500] }} aria-label="recipe">
-            R
+            C
           </Avatar>
         }
         action={
