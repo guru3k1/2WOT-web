@@ -2,8 +2,8 @@ import { all, call, put, takeLatest, select } from 'redux-saga/effects'
 import apiUtils from './api';
 import { FETCH_USER, GET_USER, GET_TASKS, START_TASK, SAVE_TASK, STOP_TASK, UPDATE_TASK, CLOSE_OPEN_TASK, GET_TIME_LOG_BY_TASK, GET_TASK_TIME } from './type';
 import { getUserSelector } from '../ducks/action';
-//const domain = "https://to-work-on-time.rj.r.appspot.com/api/v1"
-const domain = "http://localhost:8080/api/v1"
+const domain = "https://to-work-on-time.rj.r.appspot.com/api/v1"
+//const domain = "http://localhost:8080/api/v1"
 
 function* fetchUser() {
   const url = `${domain}/timeuser/getUser/`
