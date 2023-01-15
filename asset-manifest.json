@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/2WOT-web/static/css/main.12615eed.css",
-    "main.js": "/2WOT-web/static/js/main.f5308146.js",
+    "main.js": "/2WOT-web/static/js/main.dd69aa97.js",
     "static/js/787.d1d4a2c2.chunk.js": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js",
     "static/media/fa-solid-900.ttf": "/2WOT-web/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/2WOT-web/static/media/Montserrat-SemiBold.2f7a846126c7d5ee9163.ttf",
@@ -19,11 +19,11 @@
     "static/media/fa-v4compatibility.woff2": "/2WOT-web/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
     "index.html": "/2WOT-web/index.html",
     "main.12615eed.css.map": "/2WOT-web/static/css/main.12615eed.css.map",
-    "main.f5308146.js.map": "/2WOT-web/static/js/main.f5308146.js.map",
+    "main.dd69aa97.js.map": "/2WOT-web/static/js/main.dd69aa97.js.map",
     "787.d1d4a2c2.chunk.js.map": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12615eed.css",
-    "static/js/main.f5308146.js"
+    "static/js/main.dd69aa97.js"
   ]
 }
