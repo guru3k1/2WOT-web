@@ -1,24 +1,30 @@
-import { all, call, put, takeLatest } from 'redux-saga/effects'
+import { all, call, put, takeLatest, select } from 'redux-saga/effects'
 import apiUtils from './api';
-
 import { FETCH_USER, GET_USER, GET_TASKS, START_TASK, SAVE_TASK, STOP_TASK, UPDATE_TASK, CLOSE_OPEN_TASK, GET_TIME_LOG_BY_TASK, GET_TASK_TIME } from './type';
-
-const domain = "https://to-work-on-time.rj.r.appspot.com/api/v1"
-//const domain = "http://localhost:8080/api/v1"
+import { getUserSelector } from '../ducks/action';
+//const domain = "https://to-work-on-time.rj.r.appspot.com/api/v1"
+const domain = "http://localhost:8080/api/v1"
 
 function* fetchUser() {
-
   const url = `${domain}/timeuser/getUser/`
   try {
-    const response = yield call(apiUtils.get,url+1);
-    if(response.data){
-      yield put({type: GET_USER, user: response.data});
-      yield put({type: GET_TASKS, tasks: response.data.userTasks})
+    const user = yield select(getUserSelector)
+    console.log(user)
+    if(user){
+      const response = yield call(apiUtils.get,url+user.id);
+      if(response.data){
+        yield put({type: GET_USER, user: response.data});
+        yield put({type: GET_TASKS, tasks: response.data.userTasks})
+      }else{
+        throw new Error("User response is undefined")
+      }
+      
     }else{
-      throw new Error("User response is undefined")
+      console.error("Error getting user")
     }
+
   } catch (e) {
-    //console.log("Error getting user %d",e);
+    console.log("Error getting user %d",e);
   }
 }
 

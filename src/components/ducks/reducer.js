@@ -2,11 +2,7 @@ import { GET_USER, GET_TASKS, SET_MODAL_STATE, SET_LOG_VIEW_STATE, GET_TASK_TIME
 
 
 const initialState = Object.freeze({
-    user:{
-        firstName: "",
-        lastName: "",
-        userId: ""
-    },
+    user:{},
     tasks: [],
     modalState: false,
     logViewState: false,
@@ -20,7 +16,10 @@ export default function reducer (state = initialState, action){
         case GET_USER:
             return {
                 ...state,
-                user: action.user
+                user: {
+                    ...state.user,
+                    ...action.user
+                }
             };
         case GET_TASKS:
             return {

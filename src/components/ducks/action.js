@@ -44,3 +44,9 @@ export function getTaskTime(taskTime) {
 export function closeOpenTask(task) {
   return { type: CLOSE_OPEN_TASK, task}
 }
+
+export function setUser(user) {
+  return { type: GET_USER, user}
+}
+
+export const getUserSelector = state => state.user.user

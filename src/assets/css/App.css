@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-@media screen and (min-width:350px) and (max-width:430px){
+@media screen and (min-width:320px) and (max-width:430px){
 
   .appHeader {
     width: 100vw;
@@ -12,11 +12,12 @@
   .menuContainer {
     width: 100%;
     resize: both;
-    background: url(../app-header/appheader.svg);
+    background: url(../images/appheader.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 100% 0%;
     padding-bottom: 5vh;
+    z-index: 5;
   }
 
   .headerMenuButton{
@@ -24,17 +25,19 @@
     max-height: 25px;
     font-size: 8px;
     padding: 5px 5px;
-    top: 3vh;
+    top: 3.7vh;
     left: 30vw;
+    z-index: 7;
   }
   .userBox {
-    top: 1.8vh;
-    padding: 5px;
+    top: 0vh;
+    padding: 0px;
     background-color: rgba(39, 61, 85, 0.98);
     position: absolute;
     right: 1vw;
     color: white;
     margin: 10px;
+    z-index: 6;
   }
 
   .taskView {
@@ -67,6 +70,18 @@
     border-radius: 10px;
     height: 50vh;
   }
+  
+  .btn-face,
+  .btn-google {
+    width: 100%;
+  }
+  .wrap-login100 {
+    padding: 20px 30px 20px 30px;
+    width: 680px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+  }
 }
 
 @media screen and (min-width:430px) and (max-width:1023px){
@@ -76,6 +91,11 @@
     border: red 1px;
     width: 100vh;
     height: 1368px;
+  }
+
+  .wrap-login100 {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -88,7 +108,7 @@
   .menuContainer {
     width: 100%;
     resize: both;
-    background: url(../app-header/appheader.svg);
+    background: url(../images/appheader.svg);
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: 100% 0%;
@@ -142,6 +162,14 @@
     border-radius: 10px;
     min-height: 520px;
   }
+
+  .wrap-login100 {
+  padding: 62px 110px 33px 110px;
+  width: 680px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
 }
 
 .card{
@@ -194,4 +222,38 @@
   height: 340px;
   max-height: 340px;
   overflow: scroll;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;;
+}
+
+.wrap-login100 {
+  width: 680px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.loginBackground {
+  background-image: url('../images/bg-01.jpg');
 }

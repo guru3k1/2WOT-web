@@ -8,7 +8,7 @@ const responseModel = Object.freeze({
 
 const alterURL = relativeUrl => {
     // eslint-disable-next-line no-restricted-globals
-    const url = new URL(location.href);
+    //const url = new URL(location.href);
 
     /*if (url.hostname ===  'localhost'){
          return `${url.origin.replace("9003","9999")}${relativeUrl}`;
