@@ -9,7 +9,6 @@ function* fetchUser() {
   const url = `${domain}/timeuser/getUser/`
   try {
     const user = yield select(getUserSelector)
-    console.log(user)
     if(user){
       const response = yield call(apiUtils.get,url+user.id);
       if(response.data){
@@ -24,7 +23,7 @@ function* fetchUser() {
     }
 
   } catch (e) {
-    console.log("Error getting user %d",e);
+    console.error("Error getting user %d",e);
   }
 }
 
@@ -36,7 +35,7 @@ function* startTask(action) {
       yield call(fetchUser)
     }
   }catch(e) {
-    console.log("Error getting task started ",action.task)
+    console.error("Error getting task started ",action.task)
   }
 }
 
@@ -48,7 +47,7 @@ function* stopTask(action) {
       yield call(fetchUser)
     }
   }catch(e) {
-    console.log("Error getting task started ",action.task)
+    console.error("Error stopping task ",action.task)
   }
 }
 
@@ -60,7 +59,7 @@ function* saveTask(action) {
       yield call(fetchUser)
     }
   }catch(e) {
-    console.log("Error getting task started ",action.task)
+    console.error("Error getting task started ",action.task)
   }
 }
 
@@ -72,10 +71,10 @@ function* updateTask(action) {
       yield call(fetchUser)
     }
     else{
-      console.log("Error updating task response:",response.data.message)
+      console.error("Error updating task response:",response.data.message)
     }
   }catch(e) {
-    console.log("Error updating task ",action.task)
+    console.error("Error updating task ",action.task)
   }
 }
 
@@ -87,10 +86,10 @@ function* closeTask(action){
       yield call(fetchUser)
     }
     else{
-      console.log("Error closing task response:",response.data.message)
+      console.error("Error closing task response:",response.data.message)
     }
   }catch(e) {
-    console.log("Error closing task ",action.task)
+    console.error("Error closing task ",action.task)
   }
 }
 
@@ -102,10 +101,10 @@ function* getTaskTime(action){
       yield put({type: GET_TASK_TIME, taskTime: response.data});
     }
     else{
-      console.log("Error closing task response:",response.data.message)
+      console.error("Error getting task time response:",response.data.message)
     }
   }catch(e) {
-    console.log("Error closing task ",action.task)
+    console.error("Error getting task time ",action.task)
   }
 }
 
