@@ -7,6 +7,9 @@ const Login = () => {
     async function signInWithProvider(provider) {
         const { data, error } = await supabase.auth.signInWithOAuth({
           provider,
+		  options: {
+			redirectTo: 'https://guru3k1.github.io/2WOT-web/',
+		  }
         })
       }
 
@@ -14,7 +17,10 @@ const Login = () => {
         e.preventDefault();
         try {
             const {data, errorResponse} = await supabase.auth.signInWithOtp({
-                email: email
+                email: email,
+				options: {
+					emailRedirectTo: 'https://guru3k1.github.io/2WOT-web/',
+				  },
             })
         } catch (error) {
             console.error(error)

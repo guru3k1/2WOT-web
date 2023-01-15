@@ -6,7 +6,6 @@ import '../../assets/css/App.css'
 import '../../assets/css/main.css'
 import '../../assets/css/util.css'
 import Login from '../login';
-import FourOFour from '../fourofour';
 
 export const supabase = createClient(
   process.env.REACT_APP_SUPABASE_URL,
@@ -31,7 +30,6 @@ const App = () => {
       <Routes>
         <Route path="/2WOT-web/" element={<MainView/>}/>
         <Route path="/2WOT-web/login" element={<Login/>}/>
-        {/* <Route path="*" element={<FourOFour/>}/> */}
       </Routes>
       
     </>
