@@ -20,31 +20,17 @@ const App = () => {
   useEffect(() => {
     supabase.auth.onAuthStateChange((event,session)=> {
       if(!session){
-        navigate('/login')
+        navigate('/2WOT-web/login')
       }else{
-        navigate('/')
+        navigate('/2WOT-web/')
       }
     })
   }, [navigate])
-
-  //<Auth 
-  //   supabaseClient={supabase}
-  //   providers={['google','github']}
-  //   theme='dark'
-  //   localization={{
-  //     variables: {
-  //       sign_in: {
-  //         email_label: 'Your email address',
-  //         password_label: 'Your strong password',
-  //       },
-  //     },
-  //   }}
-  // />;
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainView/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/2WOT-web/" element={<MainView/>}/>
+        <Route path="/2WOT-web/login" element={<Login/>}/>
         <Route path="*" element={<FourOFour/>}/>
       </Routes>
       

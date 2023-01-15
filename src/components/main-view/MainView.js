@@ -14,10 +14,10 @@ export const MainView = () => {
             const {data,error} = await supabase.auth.getUser();
             if(error){
                 console.error(error)
-                navigate("/login");
+                navigate("/2WOT-web/login");
             }
             if(!data.user){
-                navigate("/login");
+                navigate("/2WOT-web/login");
             }else{
                 dispatch(setUser(data.user))
             }
