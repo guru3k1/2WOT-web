@@ -31,7 +31,7 @@ const App = () => {
       <Routes>
         <Route path="/2WOT-web/" element={<MainView/>}/>
         <Route path="/2WOT-web/login" element={<Login/>}/>
-        <Route path="*" element={<FourOFour/>}/>
+        {/* <Route path="*" element={<FourOFour/>}/> */}
       </Routes>
       
     </>
