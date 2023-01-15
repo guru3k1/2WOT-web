@@ -1,16 +1,29 @@
 {
   "files": {
-    "main.css": "/2WOT-web/static/css/main.47af3a1b.css",
-    "main.js": "/2WOT-web/static/js/main.cf5cec6c.js",
+    "main.css": "/2WOT-web/static/css/main.12615eed.css",
+    "main.js": "/2WOT-web/static/js/main.f5308146.js",
     "static/js/787.d1d4a2c2.chunk.js": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js",
+    "static/media/fa-solid-900.ttf": "/2WOT-web/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/2WOT-web/static/media/Montserrat-SemiBold.2f7a846126c7d5ee9163.ttf",
+    "static/media/Montserrat-Medium.ttf": "/2WOT-web/static/media/Montserrat-Medium.647f0e61af3a76a138c3.ttf",
+    "static/media/fa-brands-400.ttf": "/2WOT-web/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/bg-01.jpg": "/2WOT-web/static/media/bg-01.1a488f571f5b2a0cf014.jpg",
+    "static/media/fa-solid-900.woff2": "/2WOT-web/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/Poppins-Regular.ttf": "/2WOT-web/static/media/Poppins-Regular.1c701c9a6b587802e3d0.ttf",
+    "static/media/Poppins-Medium.ttf": "/2WOT-web/static/media/Poppins-Medium.b59f6a636397975c5409.ttf",
+    "static/media/fa-brands-400.woff2": "/2WOT-web/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
+    "static/media/fa-regular-400.ttf": "/2WOT-web/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
+    "static/media/fa-regular-400.woff2": "/2WOT-web/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/fa-v4compatibility.ttf": "/2WOT-web/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
     "static/media/appheader.svg": "/2WOT-web/static/media/appheader.56f9bcb8476ef31734f2.svg",
+    "static/media/fa-v4compatibility.woff2": "/2WOT-web/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
     "index.html": "/2WOT-web/index.html",
-    "main.47af3a1b.css.map": "/2WOT-web/static/css/main.47af3a1b.css.map",
-    "main.cf5cec6c.js.map": "/2WOT-web/static/js/main.cf5cec6c.js.map",
+    "main.12615eed.css.map": "/2WOT-web/static/css/main.12615eed.css.map",
+    "main.f5308146.js.map": "/2WOT-web/static/js/main.f5308146.js.map",
     "787.d1d4a2c2.chunk.js.map": "/2WOT-web/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47af3a1b.css",
-    "static/js/main.cf5cec6c.js"
+    "static/css/main.12615eed.css",
+    "static/js/main.f5308146.js"
   ]
 }
