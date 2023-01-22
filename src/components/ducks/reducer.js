@@ -46,7 +46,7 @@ export default function reducer (state = initialState, action){
         case SET_LOADING_STATE:
             return {
                 ...state,
-                isLoading: action.state
+                isLoading: action.isLoading
             }
         default:
             return state;
