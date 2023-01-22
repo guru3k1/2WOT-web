@@ -1,5 +1,6 @@
 import { GET_USER, FETCH_USER, START_TASK, STOP_TASK, SAVE_TASK, SET_MODAL_STATE,
-  UPDATE_TASK, GET_TIME_LOG_BY_TASK, CLOSE_OPEN_TASK, SET_LOG_VIEW_STATE, GET_TASK_TIME } from "./type";
+  UPDATE_TASK, GET_TIME_LOG_BY_TASK, CLOSE_OPEN_TASK, SET_LOG_VIEW_STATE,
+  GET_TASK_TIME, SET_LOADING_STATE } from "./type";
 
 export function getUser(user) {
     return { type: GET_USER, user }
@@ -47,6 +48,10 @@ export function closeOpenTask(task) {
 
 export function setUser(user) {
   return { type: GET_USER, user}
+}
+
+export function isLoading(state) {
+  return { type: SET_LOADING_STATE, state}
 }
 
 export const getUserSelector = state => state.user.user

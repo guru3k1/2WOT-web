@@ -1,4 +1,4 @@
-import { GET_USER, GET_TASKS, SET_MODAL_STATE, SET_LOG_VIEW_STATE, GET_TASK_TIME } from "./type";
+import { GET_USER, GET_TASKS, SET_MODAL_STATE, SET_LOG_VIEW_STATE, GET_TASK_TIME, SET_LOADING_STATE } from "./type";
 
 
 const initialState = Object.freeze({
@@ -8,6 +8,7 @@ const initialState = Object.freeze({
     logViewState: false,
     durationMap: {},
     dailyTimeMap: {},
+    isLoading: false,
 });
 
 
@@ -41,6 +42,11 @@ export default function reducer (state = initialState, action){
                 ...state,
                 durationMap: action.taskTime.durationMap,
                 dailyTimeMap: action.taskTime.dailyTimeMap,
+            }
+        case SET_LOADING_STATE:
+            return {
+                ...state,
+                isLoading: action.state
             }
         default:
             return state;

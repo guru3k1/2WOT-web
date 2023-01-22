@@ -7,6 +7,7 @@ import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
+import Spinner from './components/spinner'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
       <StyledEngineProvider injectFirst>
         <BrowserRouter>
           <App />
+          <Spinner/>
         </BrowserRouter>
       </StyledEngineProvider>
     </Provider>

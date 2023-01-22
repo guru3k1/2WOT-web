@@ -257,3 +257,21 @@
 .loginBackground {
   background-image: url('../images/bg-01.jpg');
 }
+.spinnerBox{
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  background-color:'rgba(0,0,30,0.4)';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-size: cover;
+  box-shadow: 24;
+}
+
+.spinner{
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
